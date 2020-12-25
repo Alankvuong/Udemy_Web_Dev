@@ -1,0 +1,40 @@
+/****************************** Tag Selectors **************************/
+h1
+{
+    color: red; font-size: 100px;
+}
+
+
+img:hover
+{
+    background-color: yellow;      /* This is overrided by the id selector */
+}
+
+
+/**************************** Class Selectors ***************************/
+
+.bacon
+{
+    background-color: rgb(19, 201, 19);
+}
+
+.broccoli
+{
+    background-color: red;
+}
+
+.circular
+{
+    border-radius: 10%;
+}
+/******************************* ID Selectors ***************************/
+
+#heading        /* This overides the h1 tag selector from above*/
+{
+    color: blue;
+}
+
+#big
+{
+    font-size: 100px;
+}
