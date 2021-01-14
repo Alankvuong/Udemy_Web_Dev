@@ -1,43 +1,46 @@
-/* body
+body
 {
-    font-family: "Montserrat";
-} */
-
-#title
-{
-    background-color: #ff4C68;
-    color: white;
+    text-align: center;
 }
 
-.container-fluid
+h1, h2, h3, h4, h5, h6
 {
-    padding: 3% 15% 20%;
-}
-
-h1
-{
-    font-family: 'Montserrat', sans-serif;
-    size: 3.5rem;
-    line-height: 1.5;
-}
-
-h2
-{
-    font-family: "Montserrat";
-    /* size: 3rem; */
-    font-size: 3.5rem;
-}
-
-h3
-{
-    font-family: "Montserrat";
-    size: 2.5rem;
+    font-family: "Montserrat-Bold", "Montserrat";
 }
 
 p
 {
     color: #8f8f8f;
-    font-family: 'Montserrat';
+}
+
+/* Headings */
+.big-heading
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+.section-heading
+{
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+.container-fluid
+{
+    padding: 7% 15%;
+}
+
+/* Sections */
+.colored-section
+{
+    background-color: #ff4C68;
+}
+
+.white-section
+{
+    background-color: white;
 }
 
 /* Navigation Bar */
@@ -73,6 +76,15 @@ p
     margin: 5% 3% 5% 0;
 }
 
+/* Title Section */
+
+#title .container-fluid
+{
+    text-align: left;
+    padding: 3% 15% 10%;
+    color: white;
+}
+
 /* Title Image */
 
 .iphone-img
@@ -87,14 +99,17 @@ p
 
 #features
 {
-    padding: 7% 15%;
     background-color: white;
     position: relative;
 }
 
+.features-title
+{
+    size: 2.5rem;
+}
+
 .feature-box
 {
-    text-align: center;
     padding: 5%;
 }
 
@@ -113,8 +128,6 @@ p
 
 #testimonials
 {
-    padding: 5% 15%;
-    text-align: center;
     background-color: #ef8172;
     color: white;
 }
@@ -126,15 +139,15 @@ p
     margin: 20px;
 }
 
-.carousel-item
+.testimonial-text
 {
-    padding: 7% 15%;
+    font-size: 3.5rem;
+    line-height: 1.5;
 }
 
 #press
 {
     background-color: #ef8172;
-    text-align: center;
     padding-bottom: 3%;
 }
 
@@ -149,7 +162,11 @@ p
 #pricing
 {
     padding: 100px;
-    text-align: center;
+}
+
+.pricing-title
+{
+    size: 2.5rem;
 }
 
 .pricing-column
@@ -157,6 +174,11 @@ p
     padding: 3% 2%;
 }
 
+.price-text
+{
+    font-size: 3rem;
+    line-height: 1.5;
+}
 @media(max-width: 990px)
 {
     .iphone-img
@@ -170,3 +192,23 @@ p
         text-align: center;
     }
 }
+
+/* CTA Section */
+
+#cta
+{
+    color: white;
+}
+
+.cta-button
+{
+    margin: 5% 3% 5% 0;
+}
+
+/* Footer */
+
+.footer-buttons
+{
+    margin: 2% 0.5% 2% 0.5%;
+}
+
