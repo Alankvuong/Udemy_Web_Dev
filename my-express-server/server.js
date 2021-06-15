@@ -21,7 +21,7 @@ app.get("/about", function(req, res)
 
 app.get("/hobbies", function(req, res)
 {
-    res.send("I like playing basketball");
+    res.send("I like playing basketball and playing piano");
 })
 
 app.listen(3000, function(){
