@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather App</title>
+</head>
+<body>
+	<form action="/" method="post">
+		<label for="cityInput">City Name: </label>
+		<input id="cityName"type="text" name="cityName">
+		<br><br>
+		<label for="unitsInput">Units: </label>
+		<br>
+		<input id="imperialUnits" type="radio" value="Imperial" name="units">
+		<label for="unitsInput">Imperial </label>
+
+		<input id="metricUnits" type="radio" value="metric" name="units">
+		<label for="unitsInput">Metric</label> 
+
+		<br>
+		<button type="submit">Submit</button>
+	</form>
+	<script src="./app.js"></script>
+</body>
+</html>
