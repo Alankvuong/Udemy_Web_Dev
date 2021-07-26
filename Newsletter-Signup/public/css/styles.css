@@ -24,9 +24,7 @@ body {
   padding: 15px;
   margin: 0 auto;
 }
-.form-signin .checkbox {
-  font-weight: 400;
-}
+
 .form-signin .form-control {
   position: relative;
   box-sizing: border-box;
@@ -50,4 +48,9 @@ body {
   margin-bottom: -1px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.btn-block{
+  width: 15rem;
+  background-color: rgb(19, 115, 224)
 }
