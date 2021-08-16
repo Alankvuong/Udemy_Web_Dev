@@ -49,22 +49,32 @@ app.post("/", function(req, res){
     const request = https.request(url, options, function(response){
         let statusCode = response.statusCode;
         console.log("Status Code: " + statusCode);
-        if(statusCode === 200){
-            res.send("Thank you for subscribing to my newsletter!");
-        }
-        else{
-            res.send("You have encountered a " + statusCode + " error. Please try again later.");
+        // if(statusCode === 200){
+        //     res.send("Thank you for subscribing to my newsletter!");
+        // }
+        // else{
+        //     res.send("You have encountered a " + statusCode + " error. Please try again later.");
+        // }
+
+        if(statusCode === '200') {
+            res.sendFile(__dirname + "/success.html");
+        } else {
+            res.sendFile(__dirname + "/failure.html");
+
         }
 
-        if(statusCode === '200')
         response.on("data", function(data){
             console.log(JSON.parse(data));
-        })
-    })
+        });
+    });
 
     request.write(jsonData);
     request.end();
+});
 
+app.post("/failure", function(req, res){
+    res.redirect("/");
+    console.log("Hello");
 });
 
 app.listen(3000, function(){
