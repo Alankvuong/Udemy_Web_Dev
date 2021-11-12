@@ -44,19 +44,13 @@ app.post("/", function (req, res) {
   const url = "https://us6.api.mailchimp.com/3.0/lists/b1305309d8";
   const options = {
     method: "POST",
-    auth: "alankvuong:03b302e98341d68f6565ea0d2464d92b-us6",
+    auth: "alankvuong:be7d69fd8d8cda8024cd068710c73943-us6",
   };
   const request = https.request(url, options, function (response) {
     let statusCode = response.statusCode;
     console.log("Status Code: " + statusCode);
-    // if(statusCode === 200){
-    //     res.send("Thank you for subscribing to my newsletter!");
-    // }
-    // else{
-    //     res.send("You have encountered a " + statusCode + " error. Please try again later.");
-    // }
 
-    if (statusCode === "200") {
+    if (statusCode === 200) {
       res.sendFile(__dirname + "/success.html");
     } else {
       res.sendFile(__dirname + "/failure.html");
@@ -85,10 +79,3 @@ app.listen(process.env.PORT || 3000, function () {
       process.env.PORT
   );
 });
-
-// Mailchimp API Key
-// 03b302e98341d68f6565ea0d2464d92b-us6
-// 03b302e98341d68f6565ea0d2464d92b-us6
-
-// Audience/List ID
-// b1305309d8
