@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>To Do List</title>
-</head>
-<body>
-	<h1>It's a !</h1>
+<%- include("header") -%>
+<div class="box">
+	<h1 id="heading"> <%=listTitle%></h1>
+</div>
 
-</body>
-</html>
+<div class="box">
+	<!-- For loop loops through newListItems array that was passed in to display new items -->
+	<% for (var i = 0; i < newListItems.length; i++) { %>
+	<div class="item">
+		<input type="checkbox">
+			<p><%= newListItems[i]%></p>
+		</div>
+		<% } %>
+	<form class="item" action="/" method="post">
+		<input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+		<button type="submit" name="list" value=<%= listTitle %>>+</button>
+	</form>
+</div>
+<%- include("footer") -%>
